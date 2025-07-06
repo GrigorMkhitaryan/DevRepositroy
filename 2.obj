@@ -1,0 +1,20 @@
+.section .symtab
+_funcA U .text 0
+_funcB U
+_externalVar D .data 0
+
+.section .text
+global _funcA
+0:  MOV $5, %ebx       
+5:  CALL _funcB        
+10: RET                
+
+.section .data
+0: _externalVar: 20    
+
+.section .rel.text
+Offset: 6 Symbol: _funcB
+
+.section .rel.data    
+
+

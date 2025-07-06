@@ -1,0 +1,16 @@
+.section .symtab
+_funcB D .text 0
+
+.section .text
+global _funcB
+0:  ADD $2, %ebx       
+5:  RET                
+
+.section .data
+
+.section .rel.text
+
+.section .rel.data
+
+
+

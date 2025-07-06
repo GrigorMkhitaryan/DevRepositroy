@@ -1,0 +1,20 @@
+.section .symtab
+main D .text 0
+_funcA U
+_globalVar D .data 0
+
+.section .text
+global _main 
+0:  CALL _funcA       
+5:  MOV _globalVar, %eax 
+10: RET               
+
+.section .data
+0: _globalVar: 10      
+
+.section .rel.text
+Offset: 1 Symbol: _funcA
+
+
+.section .rel.data
+Offset: 6 Symbol: _globalVar
